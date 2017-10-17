@@ -17,19 +17,17 @@ $.ajax({
     $("#results2").text(JSON.stringify(data));
   }
 });
-
+  var params = {};
   // username = $("#username").val();
-  username = "ajdaling";
+  var username = "ajdaling";
   // password = $("#password").val();
-  password = "88weruio";
+  var password = "88weruio";
   if(username){
     params.username = username;
   }
   if(password){
     params.password = password;
   }
-  event.preventDefault(); //prevent form from clearing
-  console.log("input entered");
   $.ajax({
     type: "GET",
     xhrFields: { withCredentials: true },
