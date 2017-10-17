@@ -18,7 +18,6 @@ $.ajax({
   }
 });
 
-$("#login-button").click(function(event){
   // username = $("#username").val();
   username = "ajdaling";
   // password = $("#password").val();
@@ -57,4 +56,3 @@ $("#login-button").click(function(event){
       // invalidLogin();
     }
   });
-});
