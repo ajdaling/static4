@@ -10,7 +10,7 @@ console.log(cogUser);
 $("#results").text("Hello, " + cogUser.username);
 
 $.ajax({
-  url:"http:68.68.26.91:8504/",
+  url:"http://68.68.26.91:8504/",
   success:function(data){
     alert('ajax success');
     console.log(data);
