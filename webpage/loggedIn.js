@@ -17,3 +17,44 @@ $.ajax({
     $("#results2").text(JSON.stringify(data));
   }
 });
+
+$("#login-button").click(function(event){
+  // username = $("#username").val();
+  username = "ajdaling";
+  // password = $("#password").val();
+  password = "88weruio";
+  if(username){
+    params.username = username;
+  }
+  if(password){
+    params.password = password;
+  }
+  event.preventDefault(); //prevent form from clearing
+  console.log("input entered");
+  $.ajax({
+    type: "GET",
+    xhrFields: { withCredentials: true },
+      crossDomain: true,
+    url: "https://marklogic.superhindex.com/login/login.sjs",
+    data: params,
+    success: function(data){
+      console.log(data);
+      if(data == "true"){
+        alert("ml login worked");
+        $("#results3").text("logged into ML");
+        // sessionData.username = username;
+        // sessionData.start_year = "1980";
+        // sessionData.end_year = "2017";
+        // updateSessionData(sessionData);
+        // window.location.href = "dashboard.html";
+      } else{
+        alert("login 1 failed");
+        // invalidLogin();
+      }
+    },
+    error: function(data){
+      alert("failed login to ML");
+      // invalidLogin();
+    }
+  });
+});
