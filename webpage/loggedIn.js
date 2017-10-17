@@ -32,7 +32,7 @@ $.ajax({
     type: "GET",
     xhrFields: { withCredentials: true },
       crossDomain: true,
-    url: "https://marklogic.superhindex.com/login/login.sjs",
+    url: "https://marklogic.superhindex.com:8501/login/login.sjs",
     data: params,
     success: function(data){
       console.log(data);
